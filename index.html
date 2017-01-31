@@ -30,9 +30,19 @@
                    font-size: 18px;
                    font-weight: bold;'>
         <tspan x='71' y='60'>ALTO EN</tspan>
-        <tspan x='71' dy='25'>?</tspan>
+        <tspan x='71' dy='25' id='mutable'>?</tspan>
       </text>
       </g>
     </svg>
+
+    <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'>
+    <script type='application/javascript'>
+    (function() {
+        var input = document.getElementById('text-input');
+        input.addEventListener('input', function() {
+            document.getElementById('mutable').textContent = input.value.toUpperCase();
+        });
+    }());
+    </script>
   </body>
 </html>
