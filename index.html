@@ -6,7 +6,7 @@
     <link rel='stylesheet' media='screen'
           href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
     <link rel='stylesheet' media='screen'
-          href='https://fonts.googleapis.com/css?family=Fira+Sans:900|Roboto'>
+          href='https://fonts.googleapis.com/css?family=Fira+Sans:700,900|Roboto'>
     <style media='screen'>
       body {
         margin: 0px auto;
@@ -21,9 +21,24 @@
       }
 
       h1 {
-        font-family: Fira Sans, sans-serif;
-        font-size: 3.0em;
+        font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+        font-size: 4.0em;
         font-weight: 900;
+      }
+
+      h2 {
+        font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+        font-size: 1.8em;
+        font-weight: 700;
+      }
+
+      span#todos {
+        text-decoration: underline dotted;
+      }
+
+      span#white {
+        color: #FAFAFA;
+        font-size: 1.2em;
       }
 
       p {
@@ -84,7 +99,12 @@
   </head>
 
   <body>
-    <h1>Sellos para todos</h1>
+    <h1>Alto en <span id='white'>X</span></h1>
+    <h2>
+      Sellos al alcance de
+      <span id='todos'
+            title='mientras tengan un navegador relativamente moderno'>todos</span>
+    </h2>
     <p>
     Como sabemos, no sólo el abuso de azúcares, de grasas saturadas,
     de calorías, o de sodio, atenta contra nuestro bienestar.
