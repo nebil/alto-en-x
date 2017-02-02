@@ -17,8 +17,11 @@
       }
 
       input[type=text] {
-        display: inline-block;
+        box-sizing: border-box;
         padding: 1ex;
+        width: 200px;
+        height: 45px;
+
         border: none;
         border-bottom: 5px solid #222;
         transition: border-bottom-color 0.5s;
@@ -28,15 +31,35 @@
         border-bottom: 5px solid #33A;
       }
 
+      a {
+        width: 200px;
+        line-height: 45px;
+
+        background-color: #222;
+        color: #FAFAFA;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.5s;
+      }
+
+      a:hover {
+        background-color: #33A;
+      }
+
       canvas {
         display: none;
+      }
+
+      .centered {
+        display: block;
+        margin: 4px auto;
       }
     </style>
   </head>
 
   <body>
     <h1>Sellos para todos</h1>
-    <svg id='container' width='400' height='400'>
+    <svg id='container' width='400' height='400' class='centered'>
       <g transform='translate(64 64) scale(2.0)'>
       <polygon points='40,0 96,0 136,40 136,96
                        96,136 40,136 0,96 0,40'
@@ -66,9 +89,10 @@
       </g>
     </svg>
 
-    <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'>
-    <a id='to-png' role='button'>Descargar como PNG</a>
-    <a id='to-svg' role='button'>Descargar como SVG</a>
+    <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'
+           class='centered'>
+    <a id='to-png' role='button' class='centered'>Descargar como PNG</a>
+    <a id='to-svg' role='button' class='centered'>Descargar como SVG</a>
 
     <canvas id='hidden-canvas' width='400' height='400'></canvas>
     <script type='application/javascript'>
