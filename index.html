@@ -16,6 +16,10 @@
         font-family: Liberation Sans, Helvetica, Arial, sans-serif;
       }
 
+      div#controls {
+        margin-bottom: 30px;
+      }
+
       input[type=text] {
         box-sizing: border-box;
         padding: 1ex;
@@ -32,6 +36,10 @@
       }
 
       a {
+        color: #33A;
+      }
+
+      a[role=button] {
         width: 200px;
         line-height: 45px;
 
@@ -42,7 +50,7 @@
         transition: background-color 0.5s;
       }
 
-      a:hover {
+      a[role=button]:hover {
         background-color: #33A;
       }
 
@@ -98,11 +106,21 @@
       </g>
     </svg>
 
-    <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'
-           class='centered'>
-    <a id='to-png' role='button' class='centered'>Descargar como PNG</a>
-    <a id='to-svg' role='button' class='centered'>Descargar como SVG</a>
+    <div id='controls'>
+      <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'
+             class='centered'>
+      <a id='to-png' role='button' class='centered'>Descargar como PNG</a>
+      <a id='to-svg' role='button' class='centered'>Descargar como SVG</a>
+    </div>
 
+    <p>
+    (Psst... si es que no sabes lo que significa
+      <a href='https://es.wikipedia.org/wiki/Portable_Network_Graphics'>
+        <abbr title='Portable Network Graphics'>PNG</abbr></a> o
+      <a href='https://es.wikipedia.org/wiki/Scalable_Vector_Graphics'>
+        <abbr title='Scalable Vector Graphics'>SVG</abbr></a>,
+    entonces, probablemente, deberías elegir la primera opción.)
+    </p>
     <canvas id='hidden-canvas' width='400' height='400'></canvas>
     <script type='application/javascript'>
     (function() {
