@@ -32,7 +32,7 @@
 
   <body>
     <h1>Sellos para todos</h1>
-    <svg width='400' height='400'>
+    <svg id='container' width='400' height='400'>
       <g transform='translate(64 64) scale(2.0)'>
       <polygon points='40,0 96,0 136,40 136,96
                        96,136 40,136 0,96 0,40'
@@ -62,12 +62,30 @@
     </svg>
 
     <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'>
+
+    <canvas id='canvas' width='400' height='400'></canvas>
     <script type='application/javascript'>
     (function() {
         var input = document.getElementById('text-input');
         input.addEventListener('input', function() {
             var replacement = input.value.toUpperCase() || ' ';
             document.getElementById('mutable').textContent = replacement;
+
+            // Adapted from: https://developer.mozilla.org/en-US/docs/Web/API/
+            // ======= =====     Canvas_API/Drawing_DOM_objects_into_a_canvas/
+            var container = document.getElementById('container');
+            var svgString = new XMLSerializer().serializeToString(container);
+            var imageBlob = new Blob([svgString], { type: 'image/svg+xml' });
+
+            var canvas = document.getElementById('canvas');
+            var domUrl = window.URL || window.webkitURL || window;
+            var svg = domUrl.createObjectURL(imageBlob);
+            var img = new Image();
+            img.src = svg;
+
+            img.onload = function() {
+                canvas.getContext('2d').drawImage(img, 0, 0);
+            };
         });
     }());
     </script>
