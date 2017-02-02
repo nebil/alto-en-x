@@ -90,10 +90,14 @@
 
                 // Offer a PNG version.
                 var png = canvas.toDataURL('image/png');
-                document.getElementById('to-png').href = png;
+                var pngButton = document.getElementById('to-png');
+                pngButton.download = 'alto-en-' + input.value.toLowerCase() + '.png';
+                pngButton.href = png;
 
                 // Offer an SVG version.
-                document.getElementById('to-svg').href = svg;
+                var svgButton = document.getElementById('to-svg');
+                svgButton.download = 'alto-en-' + input.value.toLowerCase() + '.svg';
+                svgButton.href = svg;
             };
         });
     }());
