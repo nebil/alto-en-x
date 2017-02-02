@@ -5,15 +5,32 @@
     <title>Alto en X</title>
     <link rel='stylesheet' media='screen'
           href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+    <link rel='stylesheet' media='screen'
+          href='https://fonts.googleapis.com/css?family=Fira+Sans:900|Roboto'>
     <style media='screen'>
       body {
         margin: 0px auto;
         padding: 4ex 3em;
-        max-width: 600px;
+        max-width: 480px;
 
         background-color: #FC3;
         color: #333;
-        font-family: Liberation Sans, Helvetica, Arial, sans-serif;
+        font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
+        line-height: 160%;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1 {
+        font-family: Fira Sans, sans-serif;
+        font-size: 3.0em;
+        font-weight: 900;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+        text-align: justify;
       }
 
       div#controls {
@@ -28,6 +45,7 @@
 
         border: none;
         border-bottom: 5px solid #222;
+        font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
         transition: border-bottom-color 0.5s;
       }
 
