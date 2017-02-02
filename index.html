@@ -27,6 +27,10 @@
       input[type=text]:focus {
         border-bottom: 5px solid #33A;
       }
+
+      canvas {
+        display: none;
+      }
     </style>
   </head>
 
@@ -65,7 +69,7 @@
     <a id='to-png' role='button'>Descargar como PNG</a>
     <a id='to-svg' role='button'>Descargar como SVG</a>
 
-    <canvas id='canvas' width='400' height='400'></canvas>
+    <canvas id='hidden-canvas' width='400' height='400'></canvas>
     <script type='application/javascript'>
     (function() {
         var input = document.getElementById('text-input');
@@ -79,7 +83,7 @@
             var svgString = new XMLSerializer().serializeToString(container);
             var imageBlob = new Blob([svgString], { type: 'image/svg+xml' });
 
-            var canvas = document.getElementById('canvas');
+            var canvas = document.getElementById('hidden-canvas');
             var domUrl = window.URL || window.webkitURL || window;
             var svg = domUrl.createObjectURL(imageBlob);
             var img = new Image();
