@@ -62,6 +62,8 @@
     </svg>
 
     <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'>
+    <a id='to-png' role='button'>Descargar como PNG</a>
+    <a id='to-svg' role='button'>Descargar como SVG</a>
 
     <canvas id='canvas' width='400' height='400'></canvas>
     <script type='application/javascript'>
@@ -85,6 +87,13 @@
 
             img.onload = function() {
                 canvas.getContext('2d').drawImage(img, 0, 0);
+
+                // Offer a PNG version.
+                var png = canvas.toDataURL('image/png');
+                document.getElementById('to-png').href = png;
+
+                // Offer an SVG version.
+                document.getElementById('to-svg').href = svg;
             };
         });
     }());
