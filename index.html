@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2017, Nebil Kawas García
+   - This source code is subject to the terms of the Mozilla Public License.
+   - If a copy of the MPL was not distributed with this file,
+   - You can obtain one at https://mozilla.org/MPL/2.0/.  -->
+
+<html lang='es'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Alto en X</title>
+    <link rel='stylesheet' media='screen'
+          href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+    <link rel='stylesheet' media='screen'
+          href='https://fonts.googleapis.com/css?family=Fira+Sans:700,900|Roboto'>
+    <style media='screen'>
+      body {
+        margin: 0px auto;
+        padding: 4ex 3em;
+        max-width: 480px;
+
+        background-color: #FC3;
+        color: #333;
+        font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
+        line-height: 160%;
+        text-rendering: optimizeLegibility;
+      }
+
+      h1 {
+        font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+        font-size: 4.0em;
+        font-weight: 900;
+      }
+
+      h2 {
+        font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+        font-size: 1.8em;
+        font-weight: 700;
+      }
+
+      span#todos {
+        text-decoration: underline dotted;
+      }
+
+      span#white {
+        color: #FAFAFA;
+        font-size: 1.2em;
+      }
+
+      p {
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+        text-align: justify;
+      }
+
+      div#controls {
+        margin-bottom: 30px;
+      }
+
+      input[type=text] {
+        box-sizing: border-box;
+        padding: 1ex;
+        width: 200px;
+        height: 45px;
+
+        border: none;
+        border-bottom: 5px solid #222;
+        font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
+        transition: border-bottom-color 0.5s;
+      }
+
+      input[type=text]:focus {
+        border-bottom: 5px solid #33A;
+      }
+
+      a {
+        color: #33A;
+      }
+
+      a[role=button] {
+        width: 200px;
+        line-height: 45px;
+
+        background-color: #222;
+        color: #FAFAFA;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.5s;
+      }
+
+      a[role=button]:hover {
+        background-color: #33A;
+      }
+
+      canvas {
+        display: none;
+      }
+
+      .centered {
+        display: block;
+        margin: 4px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Alto en <span id='white'>X</span></h1>
+    <h2>
+      Sellos al alcance de
+      <span id='todos'
+            title='mientras tengan un navegador relativamente moderno'>todos</span>
+    </h2>
+    <p>
+    Como sabemos, no sólo el abuso de azúcares, de grasas saturadas,
+    de calorías, o de sodio, atenta contra nuestro bienestar.
+    En efecto, desenlaces nocivos pueden ocurrir,
+    frutos del exceso de otro tipo de conductas.
+    Por esto, esta sencilla herramienta ha sido creada para elaborar sellos
+    que adviertan sobre los peligros de algún exceso en particular.
+    </p>
+
+    <svg id='container' width='400' height='400' class='centered'>
+      <g transform='translate(64 64) scale(2.0)'>
+      <polygon points='40,0 96,0 136,40 136,96
+                       96,136 40,136 0,96 0,40'
+               stroke='#222' stroke-width='30'>
+      </polygon>
+      <polygon points='40,0 96,0 136,40 136,96
+                       96,136 40,136 0,96 0,40'
+               stroke='#FAFAFA' stroke-width='27'>
+      </polygon>
+      <polygon points='40,0 96,0 136,40 136,96
+                       96,136 40,136 0,96 0,40'
+               stroke='#222' stroke-width='13'>
+      </polygon>
+      <polygon points='40,0 96,0 136,40 136,96
+                       96,136 40,136 0,96 0,40'
+               stroke='#FAFAFA' stroke-width='08' fill='#222'>
+      </polygon>
+      <rect fill='#F5F5F5' x='68' y='144' width='1' height='4'></rect>
+      <text fill='#FAFAFA' text-anchor='middle'
+            style='font-family: Liberation Sans, Helvetica, Arial, sans-serif;
+                   font-weight: bold;'>
+        <tspan x='68' y='60'  style='font-size: 18px;'>ALTO EN</tspan><!--
+     --><tspan x='68' dy='25' style='font-size: 19px;' id='mutable'>?</tspan><!--
+     --><tspan x='68' dy='30' style='font-size: 9px;'>Ministerio</tspan><!--
+     --><tspan x='68' dy='10' style='font-size: 9px;'>de Salud</tspan>
+      </text>
+      </g>
+    </svg>
+
+    <div id='controls'>
+      <input id='text-input' type='text' maxlength='10' placeholder='e.g. azúcares'
+             class='centered'>
+      <a id='to-png' role='button' class='centered'>Descargar como PNG</a>
+      <a id='to-svg' role='button' class='centered'>Descargar como SVG</a>
+    </div>
+
+    <p>
+    (Psst... si es que no sabes lo que significa
+      <a href='https://es.wikipedia.org/wiki/Portable_Network_Graphics'>
+        <abbr title='Portable Network Graphics'>PNG</abbr></a> o
+      <a href='https://es.wikipedia.org/wiki/Scalable_Vector_Graphics'>
+        <abbr title='Scalable Vector Graphics'>SVG</abbr></a>,
+    entonces, probablemente, deberías elegir la primera opción.)
+    </p>
+    <canvas id='hidden-canvas' width='400' height='400'></canvas>
+    <script type='application/javascript'>
+    (function() {
+        var input = document.getElementById('text-input');
+        input.addEventListener('input', function() {
+            var replacement = input.value.toUpperCase() || ' ';
+            document.getElementById('mutable').textContent = replacement;
+
+            // Adapted from: https://developer.mozilla.org/en-US/docs/Web/API/
+            // ======= =====     Canvas_API/Drawing_DOM_objects_into_a_canvas/
+            var container = document.getElementById('container');
+            var svgString = new XMLSerializer().serializeToString(container);
+            var imageBlob = new Blob([svgString], { type: 'image/svg+xml' });
+
+            var canvas = document.getElementById('hidden-canvas');
+            var domUrl = window.URL || window.webkitURL || window;
+            var svg = domUrl.createObjectURL(imageBlob);
+            var img = new Image();
+            img.src = svg;
+
+            img.onload = function() {
+                canvas.getContext('2d').drawImage(img, 0, 0);
+
+                // Offer a PNG version.
+                var png = canvas.toDataURL('image/png');
+                var pngButton = document.getElementById('to-png');
+                pngButton.download = 'alto-en-' + input.value.toLowerCase() + '.png';
+                pngButton.href = png;
+
+                // Offer an SVG version.
+                var svgButton = document.getElementById('to-svg');
+                svgButton.download = 'alto-en-' + input.value.toLowerCase() + '.svg';
+                svgButton.href = svg;
+            };
+        });
+    }());
+    </script>
+  </body>
+</html>
