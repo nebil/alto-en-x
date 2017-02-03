@@ -29,3 +29,8 @@ Desde acá, aprovecharé de agradecer
   - [Roboto](https://fonts.google.com/specimen/Roboto), obra de Christian Robertson
 - a [@necolas](https://github.com/necolas) por _normalize.css_
 - a [@mrpatiwi](https://github.com/mrpatiwi) por la idea.
+
+## Licencia
+
+El código de este repositorio está bajo el [Mozilla Public License v2.0](
+https://www.mozilla.org/MPL/2.0).
