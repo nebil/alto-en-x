@@ -7,7 +7,7 @@ You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
 body {
   margin: 0px auto;
   padding: 4ex 3em;
-  max-width: 480px;
+  max-width: 30em;
 
   background-color: #FC3;
   color: #333;
@@ -46,28 +46,28 @@ p {
 }
 
 p#abstract {
-  margin-right: -75px;
+  margin-right: -15.625%;
   font-size: 1.125em;
 }
 
 div#controls {
-  margin-bottom: 30px;
+  margin-bottom: 3ex;
 }
 
 input[type=text] {
   box-sizing: border-box;
   padding: 1ex;
-  width: 200px;
-  height: 45px;
+  width: 12em;
+  height: 5ex;
 
   border: none;
-  border-bottom: 5px solid #222;
+  border-bottom: 0.6ex solid #222;
   font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
   transition: border-bottom-color 0.5s;
 }
 
 input[type=text]:focus {
-  border-bottom: 5px solid #33A;
+  border-bottom: 0.6ex solid #33A;
 }
 
 a {
@@ -75,8 +75,8 @@ a {
 }
 
 a[role=button] {
-  width: 200px;
-  line-height: 45px;
+  width: 12em;
+  line-height: 5ex;
 
   background-color: #222;
   color: #FAFAFA;
@@ -90,11 +90,11 @@ a[role=button]:hover {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 3ex;
   padding: 1.75ex 1.5em;
 
   background-color: #F95;
-  border-left: 8px solid #F63;
+  border-left: 0.5em solid #F63;
 }
 
 strong {
@@ -107,5 +107,5 @@ canvas {
 
 .centered {
   display: block;
-  margin: 4px auto;
+  margin: 0.25em auto;
 }
