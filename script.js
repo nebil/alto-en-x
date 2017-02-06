@@ -24,16 +24,17 @@ input.addEventListener('input', function() {
 
     img.onload = function() {
         canvas.getContext('2d').drawImage(img, 0, 0);
+        var downloadFilename = 'alto-en-' + input.value.toLowerCase();
 
         // Offer a PNG version.
         var png = canvas.toDataURL('image/png');
         var pngButton = document.getElementById('to-png');
-        pngButton.download = 'alto-en-' + input.value.toLowerCase() + '.png';
+        pngButton.download = downloadFilename + '.png';
         pngButton.href = png;
 
         // Offer an SVG version.
         var svgButton = document.getElementById('to-svg');
-        svgButton.download = 'alto-en-' + input.value.toLowerCase() + '.svg';
+        svgButton.download = downloadFilename + '.svg';
         svgButton.href = svg;
     };
 });
