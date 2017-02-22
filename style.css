@@ -8,7 +8,6 @@ body {
   margin: 0px auto;
   padding: 4ex 3em;
   max-width: 30em;
-  overflow-x: hidden;
 
   background-color: #FC3;
   color: #333;
@@ -104,8 +103,8 @@ strong {
 
 object {
   position: absolute;
-    top: -91px;
-  right: -91px;
+    top: 0px;
+  right: 0px;
 }
 
 canvas {
