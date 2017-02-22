@@ -5,6 +5,22 @@ Todos los cambios relevantes en este repositorio serán descritos en este archiv
 Este proyecto cumplirá con _[semantic versioning](http://semver.org)_
 —o, por lo menos, lo intentará. :grinning:
 
+-----------------------------------------------------
+### [0.1.1](../../compare/0.1.0...0.1.1) – 2017-02-22
+
+#### :rabbit: _¿Qué hay de nuevo, viejo?_
+
+Este nuevo _release_ trae algunos cambios menores,
+que **no modifican** la funcionalidad principal.  
+Entre ellos, podemos destacar
+
+- un enlace al repositorio ubicado en GitHub
+- una superflua aclaración con relación al [Minsal](http://www.minsal.cl)
+- la inserción de un ejemplo al final del párrafo principal
+- algunos minuciosos ajustes tipográficos para mi bienestar mental
+- dos nuevos archivos: uno para el _script_, otro para los estilos
+- y, finalmente, un _refactor_ —casi imperceptible— de CSS y de JavaScript.
+
 ---------------------
 ## 0.1.0 – 2017-02-02
 

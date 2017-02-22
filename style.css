@@ -1,0 +1,117 @@
+/*
+Copyright (c) 2017, Nebil Kawas García.
+This source code is subject to the terms of the Mozilla Public License.
+You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
+*/
+
+body {
+  margin: 0px auto;
+  padding: 4ex 3em;
+  max-width: 30em;
+
+  background-color: #FC3;
+  color: #333;
+  font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
+  line-height: 160%;
+  text-rendering: optimizeLegibility;
+  -moz-text-size-adjust: none; /* fix for Firefox on mobile devices */
+}
+
+h1 {
+  font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+  font-size: 4.0em;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: Fira Sans, Liberation Sans, Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+span#todos {
+  text-decoration: underline dotted;
+}
+
+span#white {
+  color: #FAFAFA;
+  font-size: 1.2em;
+}
+
+p {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  text-align: justify;
+}
+
+p#abstract {
+  margin-right: -15.625%;
+  font-size: 1.125em;
+}
+
+div#controls {
+  margin-bottom: 3ex;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  padding: 1ex;
+  width: 12em;
+  height: 5ex;
+
+  border: none;
+  border-bottom: 0.6ex solid #222;
+  font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
+  transition: border-bottom-color 0.5s;
+}
+
+input[type=text]:focus {
+  border-bottom: 0.6ex solid #33A;
+}
+
+a {
+  color: #33A;
+}
+
+a[role=button] {
+  width: 12em;
+  line-height: 5ex;
+
+  background-color: #222;
+  color: #FAFAFA;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+a[role=button]:hover {
+  background-color: #33A;
+}
+
+footer {
+  margin-top: 3ex;
+  padding: 1.75ex 1.5em;
+
+  background-color: #F95;
+  border-left: 0.5em solid #F63;
+}
+
+strong {
+  font-size: 1.2em;
+}
+
+object {
+  position: absolute;
+    top: 0px;
+  right: 0px;
+}
+
+canvas {
+  display: none;
+}
+
+.centered {
+  display: block;
+  margin: 0.25em auto;
+}
