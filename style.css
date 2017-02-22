@@ -101,6 +101,12 @@ strong {
   font-size: 1.2em;
 }
 
+object {
+  position: absolute;
+    top: -91px;
+  right: -91px;
+}
+
 canvas {
   display: none;
 }

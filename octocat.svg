@@ -1,0 +1,63 @@
+<!-- Copyright (c) 2017, Nebil Kawas García
+   - This source code is subject to the terms of the Mozilla Public License.
+   - If a copy of the MPL was not distributed with this file,
+   - You can obtain one at https://mozilla.org/MPL/2.0/.  -->
+
+<svg xmlns='http://www.w3.org/2000/svg'
+     xmlns:xlink='http://www.w3.org/1999/xlink'
+     width='210px' height='210px'>
+  <style type='text/css'>
+    svg {
+      shape-rendering: geometricPrecision;
+    }
+
+    circle {
+      fill: #FC3;
+      transition: fill 0.5s;
+    }
+
+    circle:hover {
+      fill: #333;
+    }
+
+    path {
+      fill: #E72;
+    }
+  </style>
+
+  <g style='transform: scale(0.10);'>
+    <a xlink:href='https://github.com/nebil/alto-en-x'
+       xlink:title='Mira el código en GitHub'
+       target='_top'>
+    <circle  cx='1100' cy='1000' r='1100'></circle>
+    </a>
+    <!-- I amended (a little bit) the octocat mark, using Inkscape.
+         You can get the original mark at https://github.com/logos.
+         And now, let's throw a good amount of arbitrary numbers... -->
+    <path d=' m 100 1000
+              c 0 225 75 444 216 620
+                0 0 12 12 25 0
+                5 -5 22 -22 42 -42
+                -88 -56 -50 -120 -50 -120
+                18 -40 10 -66 10 -66
+                -10 -40 18 -14 18 -14
+                24 28 12 66 12 66
+                -18 62 32 88 52 96
+                18 -14 36 -18 50 -18
+                -50 -64 -88 -145 12 -242
+                28 -28 60 -40 96 -40
+                0 -10 22 -45 70 -64
+                28 28 36 70 42 96
+                25 15 50 35 72 56
+                22 22 40 48 55 75
+                80 16 96 45 96 45
+                -22 50 -56 66 -66 70
+                0 35 -15 66 -42 96
+                -100 100 -180 60 -242 5
+                0 18 -5 40 -30 64
+                -35 35 -64 60 -70 70
+                -15 15 0 25 0 25
+                180 150 400 222 635 222
+              v -1000 z'/>
+  </g>
+</svg>
