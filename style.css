@@ -8,6 +8,7 @@ body {
   margin: 0px auto;
   padding: 4ex 3em;
   max-width: 30em;
+  overflow-x: hidden;
 
   background-color: #FC3;
   color: #333;
