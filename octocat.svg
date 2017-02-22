@@ -14,7 +14,6 @@
     path#quarter {
         fill: #FC3;
       stroke: #FC3;
-      stroke-width: 180px;
       transition: fill 0.5s, stroke 0.5s;
     }
 
@@ -28,11 +27,11 @@
     }
   </style>
 
-  <g style='transform: scale(0.10);'>
+  <g transform='scale(0.10)'>
     <a xlink:href='https://github.com/nebil/alto-en-x'
        xlink:title='Mira el código en GitHub'
        target='_top'>
-      <path id='quarter' style='transform: rotate(90deg);'
+      <path id='quarter' transform='rotate(90)' stroke-width='180'
              d='m 1090 -1110
                 a 1000 1000 0 0 1 -1000 1000
                 l 0 -1000 z' />
