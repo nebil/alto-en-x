@@ -11,7 +11,7 @@ input.addEventListener('input', function() {
     var upperText = document.getElementById('upper');
     var lowerText = document.getElementById('lower');
     var minsalText = document.getElementById('minsal');
-    var replacement = input.value.toUpperCase() || ' ';
+    var replacement = input.value.trim().toUpperCase() || ' ';
     upperText.textContent = replacement;
 
     var whitespaceIndex = replacement.indexOf(' ');
@@ -19,7 +19,7 @@ input.addEventListener('input', function() {
         whitespaceIndex !== -1 &&
         whitespaceIndex !== replacement.length - 1) {
         // First, set the text contents.
-        var wordList = replacement.split(' ');
+        var wordList = replacement.split(/\s+/);
         upperText.textContent = wordList[0];
         lowerText.textContent = wordList.slice(1).join(' ');
         // REVIEW: The number of words in each line should be picked
@@ -55,7 +55,7 @@ input.addEventListener('input', function() {
 
     img.onload = function() {
         canvas.getContext('2d').drawImage(img, 0, 0);
-        var downloadFilename = 'alto-en-' + input.value.toLowerCase();
+        var downloadFilename = 'alto-en-' + input.value.trim().toLowerCase();
 
         // Offer a PNG version.
         var png = canvas.toDataURL('image/png');
