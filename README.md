@@ -25,8 +25,9 @@ _Por supuesto, estás invitado a hacer clic en mi seguro, libre y fantástico pe
 Desde acá, aprovecharé de agradecer
 
 - al [Ministerio de Salud](http://www.minsal.cl) por el diseño de los etiquetados
-- a [Google Fonts](https://fonts.google.com) por ofrecer tres elegantes tipofaces
-  - [Arimo](https://fonts.google.com/specimen/Arimo), obra de Steve Matteson
+- a Steve Matteson por el refrescante diseño de
+[Arimo](https://fonts.google.com/specimen/Arimo)
+- a [Google Fonts](https://fonts.google.com) por ofrecer dos elegantes tipofaces
   - [Fira Sans](https://fonts.google.com/specimen/Fira+Sans), obra de Carrois Apostrophe
   - [Roboto](https://fonts.google.com/specimen/Roboto), obra de Christian Robertson
 - a [@necolas](https://github.com/necolas) por _normalize.css_
