@@ -89,12 +89,18 @@ a[role=button]:hover {
   background-color: #33A;
 }
 
-footer {
+div#disclaimer {
   margin-top: 3ex;
   padding: 1.75ex 1.5em;
 
   background-color: #F95;
   border-left: 0.5em solid #F63;
+}
+
+footer {
+  margin-top: 3ex;
+
+  text-align: center;
 }
 
 strong {
