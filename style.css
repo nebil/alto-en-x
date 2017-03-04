@@ -99,7 +99,10 @@ div#disclaimer {
 
 footer {
   margin-top: 3ex;
+  padding: 1ex 0em;
 
+  background-color: #CC3;
+  border-left: 0.5em solid #8A3;
   text-align: center;
 }
 
