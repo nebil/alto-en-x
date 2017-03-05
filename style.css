@@ -68,6 +68,7 @@ input[type=text] {
 
 input[type=text]:focus {
   border-bottom: 0.6ex solid #33A;
+  border-radius: 0px; /* fix for Firefox on mobile devices */
 }
 
 a {
