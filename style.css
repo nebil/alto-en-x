@@ -68,6 +68,7 @@ input[type=text] {
 
 input[type=text]:focus {
   border-bottom: 0.6ex solid #33A;
+  border-radius: 0px; /* fix for Firefox on mobile devices */
 }
 
 a {
@@ -89,12 +90,21 @@ a[role=button]:hover {
   background-color: #33A;
 }
 
-footer {
+div#disclaimer {
   margin-top: 3ex;
   padding: 1.75ex 1.5em;
 
   background-color: #F95;
   border-left: 0.5em solid #F63;
+}
+
+footer {
+  margin-top: 3ex;
+  padding: 1ex 0em;
+
+  background-color: #CC3;
+  border-left: 0.5em solid #8A3;
+  text-align: center;
 }
 
 strong {

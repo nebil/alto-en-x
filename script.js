@@ -7,8 +7,39 @@ You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
 (function() {
 var input = document.getElementById('text-input');
 input.addEventListener('input', function() {
-    var replacement = input.value.toUpperCase() || ' ';
-    document.getElementById('mutable').textContent = replacement;
+    var altoEnText = document.getElementById('alto-en');
+    var upperText = document.getElementById('upper');
+    var lowerText = document.getElementById('lower');
+    var minsalText = document.getElementById('minsal');
+    var replacement = input.value.trim().toUpperCase() || ' ';
+    upperText.textContent = replacement;
+
+    var whitespaceIndex = replacement.indexOf(' ');
+    if (upperText.getComputedTextLength() > 108 &&
+        whitespaceIndex !== -1 &&
+        whitespaceIndex !== replacement.length - 1) {
+        // First, set the text contents.
+        var wordList = replacement.split(/\s+/);
+        upperText.textContent = wordList[0];
+        lowerText.textContent = wordList.slice(1).join(' ');
+        // REVIEW: The number of words in each line should be picked
+        // ======= in a more aesthetic way, by automatically finding
+        //         an arrangement that provides an equipoise between
+        //         the length of both lines.
+
+        // Then, adjust all the positions.
+        altoEnText.setAttribute('y', 50);
+        upperText.setAttribute('dy', 22);
+        lowerText.setAttribute('dy', 22);
+        minsalText.setAttribute('dy', 21);
+    } else {
+        // Otherwise, reset everything.
+        lowerText.textContent = '';
+        altoEnText.setAttribute('y', 60);
+        upperText.setAttribute('dy', 25);
+        lowerText.setAttribute('dy', 00);
+        minsalText.setAttribute('dy', 30);
+    }
 
     // Adapted from: https://developer.mozilla.org/en-US/docs/Web/API/
     // ======= =====     Canvas_API/Drawing_DOM_objects_into_a_canvas/
@@ -24,7 +55,7 @@ input.addEventListener('input', function() {
 
     img.onload = function() {
         canvas.getContext('2d').drawImage(img, 0, 0);
-        var downloadFilename = 'alto-en-' + input.value.toLowerCase();
+        var downloadFilename = 'alto-en-' + input.value.trim().toLowerCase();
 
         // Offer a PNG version.
         var png = canvas.toDataURL('image/png');

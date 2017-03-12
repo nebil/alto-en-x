@@ -5,6 +5,22 @@ Todos los cambios relevantes en este repositorio serán descritos en este archiv
 Este proyecto cumplirá con _[semantic versioning](http://semver.org)_
 —o, por lo menos, lo intentará. :grinning:
 
+----------------------------------------------------
+## [0.2.0](../../compare/0.1.1...0.2.0) – 2017-03-12
+
+#### :rabbit: _¿Qué hay de nuevo, viejo?_
+
+Este flamante _release_ viene con algunas mejoras,
+que **sí modifican** la funcionalidad principal.  
+Entre ellas, podemos destacar
+
+- la posibilidad de elaborar sellos que requieran un texto de dos líneas
+- la incorporación de Arimo Bold como nuevo _typeface_ para los sellos
+- un enlace directo hacia el _changelog_ del repositorio
+- unas breves notas sobre las [decisiones de diseño](README.md#diseño)
+- un poco de _metadata_ acerca del sitio web
+- y, finalmente, un [favícono](https://en.wikipedia.org/wiki/Favicon) minimalista.
+
 -----------------------------------------------------
 ### [0.1.1](../../compare/0.1.0...0.1.1) – 2017-02-22
 

@@ -1,0 +1,19 @@
+<!-- Copyright (c) 2017, Nebil Kawas García
+   - This source code is subject to the terms of the Mozilla Public License.
+   - If a copy of the MPL was not distributed with this file,
+   - You can obtain one at https://mozilla.org/MPL/2.0/.  -->
+
+<svg xmlns='http://www.w3.org/2000/svg'
+     xmlns:xlink='http://www.w3.org/1999/xlink'
+     width='400px' height='400px'>
+  <g transform='translate(64 64) scale(2.0)'>
+  <polygon points='40,0 96,0 136,40 136,96
+                   96,136 40,136 0,96 0,40'
+           stroke='#222' stroke-width='45'>
+  </polygon>
+  <polygon points='40,0 96,0 136,40 136,96
+                   96,136 40,136 0,96 0,40'
+           stroke='#FAFAFA' stroke-width='20' fill='#222'>
+  </polygon>
+  </g>
+</svg>
