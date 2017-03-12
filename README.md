@@ -20,6 +20,48 @@ _Mucho gusto. Así es, con un poco de imaginación, los zorros podemos hablar._
      
 _Por supuesto, estás invitado a hacer clic en mi seguro, libre y fantástico pelaje._
 
+## Diseño
+
+### De la geometría
+
+El sello está escrito en [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics),
+con el propósito de representar un octágono[\*](#one) regular de **múltiples** bordes.  
+Lamentablemente, **no es posible** definir este tipo de bordes a partir de
+la [actual especificación](https://www.w3.org/TR/SVG) de SVG,  
+pero es altamente probable que sí estén disponibles
+en la [siguiente versión](https://www.w3.org/TR/SVG2/painting.html) :grinning:
+—que quizá [nunca veremos](https://css-tricks.com/svg-2-conundrum). :roll_eyes:  
+Por lo tanto, el _workaround_ consiste en elaborar cuatro `<polygon>` superpuestos,
+con bordes de distinto ancho.
+
+### De la tipografía
+
+El manual elaborado por el Ministerio de Salud establece que
+
+> La familia Arial es la tipografía utilizada en la iconografía,  
+> específicamente su presentación _bold_ para la mayor legibilidad de los textos.
+
+Sin embargo, debemos recordar que Arial es una familia
+[comercial](https://www.fonts.com/font/monotype/arial). :moneybag:  
+Algunos navegadores cuentan con [ella](https://en.wikipedia.org/wiki/Arial),
+otros con [Helvetica](https://en.wikipedia.org/wiki/Helvetica),
+y las personas [libres](https://www.stallman.org) disfrutan de
+[Liberation Sans](https://en.wikipedia.org/wiki/Liberation_fonts).  
+Pero, lamentablemente, existen dispositivos que no conocen ninguna de ellas.
+¿Qué podemos hacer ante esto?
+
+> _Introducing Arimo: one family to rule them all._
+
+O en otras palabras, [Arimo](https://fonts.google.com/specimen/Arimo)
+—que es idéntico a Liberation Sans— es el nuevo _typeface_ estándar,  
+con el objetivo de ofrecer un mismo sello, **visualmente consistente**,
+en todos los navegadores[\*\*](#two).  
+Además, por temas de seguridad,
+las imágenes generadas desde SVG no aceptan tipofaces externas.  
+Para resolver este problema, Arimo fue transformada a
+[base64](https://en.wikipedia.org/wiki/Base64),
+para luego ser insertada en el octágono.
+
 ## Créditos
 
 Desde acá, aprovecharé de agradecer
@@ -37,3 +79,10 @@ Desde acá, aprovecharé de agradecer
 
 El código de este repositorio está bajo el [Mozilla Public License v2.0](
 https://www.mozilla.org/MPL/2.0).
+
+---
+
+<a name='one'>\*</a>
+también conocido como _octógono_, pero mantendremos las raíces helénicas.  
+<a name='two'>\*\*</a>
+donde “ todos los navegadores” quiere decir “ojalá, todos los navegadores”.
