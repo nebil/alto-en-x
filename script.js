@@ -15,9 +15,7 @@ input.addEventListener('input', function() {
     upperText.textContent = replacement;
 
     var whitespaceIndex = replacement.indexOf(' ');
-    if (upperText.getComputedTextLength() > 108 &&
-        whitespaceIndex !== -1 &&
-        whitespaceIndex !== replacement.length - 1) {
+    if (upperText.getComputedTextLength() > 108 && whitespaceIndex !== -1) {
         // First, set the text contents.
         var wordList = replacement.split(/\s+/);
         upperText.textContent = wordList[0];
