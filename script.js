@@ -7,15 +7,16 @@ You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
 (function() {
 var input = document.getElementById('text-input');
 input.addEventListener('input', function() {
+    var trimmedText = input.value.trim();
     var altoEnText = document.getElementById('alto-en');
     var upperText = document.getElementById('upper');
     var lowerText = document.getElementById('lower');
     var minsalText = document.getElementById('minsal');
-    var replacement = input.value.trim().toUpperCase() || ' ';
+    var replacement = trimmedText.toUpperCase() || ' ';
     upperText.textContent = replacement;
 
-    var whitespaceIndex = replacement.indexOf(' ');
-    if (upperText.getComputedTextLength() > 108 && whitespaceIndex !== -1) {
+    var hasWhitespace = replacement.indexOf(' ') !== -1;
+    if (hasWhitespace && upperText.getComputedTextLength() > 108) {
         // First, set the text contents.
         var wordList = replacement.split(/\s+/);
         upperText.textContent = wordList[0];
@@ -53,10 +54,10 @@ input.addEventListener('input', function() {
 
     img.onload = function() {
         canvas.getContext('2d').drawImage(img, 0, 0);
-        var downloadFilename = 'alto-en-' + input.value.trim()
-                                                       .toLowerCase()
-                                                       .split(/\s+/)
-                                                       .join('-');
+        var caterpillarName = trimmedText.toLowerCase()
+                                         .split(/\s+/)
+                                         .join('-');
+        var downloadFilename = 'alto-en-' + caterpillarName;
 
         // Offer a PNG version.
         var png = canvas.toDataURL('image/png');
