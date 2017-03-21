@@ -55,7 +55,10 @@ input.addEventListener('input', function() {
 
     img.onload = function() {
         canvas.getContext('2d').drawImage(img, 0, 0);
-        var downloadFilename = 'alto-en-' + input.value.trim().toLowerCase();
+        var downloadFilename = 'alto-en-' + input.value.trim()
+                                                       .toLowerCase()
+                                                       .split(/\s+/)
+                                                       .join('-');
 
         // Offer a PNG version.
         var png = canvas.toDataURL('image/png');
