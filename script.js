@@ -71,4 +71,8 @@ input.addEventListener('input', function() {
         svgButton.href = svg;
     };
 });
+
+document.getElementById('upper').addEventListener('click', function() {
+    document.getElementById('text-input').focus();
+});
 }());
