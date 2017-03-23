@@ -5,6 +5,23 @@ Todos los cambios relevantes en este repositorio serán descritos en este archiv
 Este proyecto cumplirá con _[semantic versioning](http://semver.org)_
 —o, por lo menos, lo intentará. :grinning:
 
+-----------------------------------------------------
+### [0.2.1](../../compare/0.2.0...0.2.1) – 2017-03-22
+
+#### :rabbit: _¿Qué hay de nuevo, viejo?_
+
+Este nuevo _release_ trae algunos cambios menores,
+que **no modifican** la funcionalidad principal.  
+Entre ellos, podemos destacar
+
+- un ajuste en el nombre del archivo descargado,
+para los sellos formados por dos o más palabras
+- el cambio de [TrueType](https://en.wikipedia.org/wiki/TrueType_fonts)
+a [WOFF](https://en.wikipedia.org/wiki/Web_Open_Font_Format),
+reduciendo el tamaño del _font_ a menos de la mitad
+- un par de mejoras sutiles en el _user experience_
+- y un pequeño _refactor_ de JavaScript.
+
 ----------------------------------------------------
 ## [0.2.0](../../compare/0.1.1...0.2.0) – 2017-03-12
 
