@@ -40,6 +40,20 @@ input.addEventListener('input', function() {
         minsalText.setAttribute('dy', 30);
     }
 
+    var upperLength = upperText.getComputedTextLength();
+    var lowerLength = lowerText.getComputedTextLength();
+    // Harmonize the text size, depending on its length.
+    if (upperLength > 118 || lowerLength > 118) {
+        upperText.style.fontSize = '18px';
+        lowerText.style.fontSize = '18px';
+    } else if (upperLength > 100 || lowerLength > 100) {
+        upperText.style.fontSize = '19px';
+        lowerText.style.fontSize = '19px';
+    } else {
+        upperText.style.fontSize = '20px';
+        lowerText.style.fontSize = '20px';
+    }
+
     // Adapted from: https://developer.mozilla.org/en-US/docs/Web/API/
     // ======= =====     Canvas_API/Drawing_DOM_objects_into_a_canvas/
     var container = document.getElementById('container');
