@@ -91,8 +91,13 @@ function setText() {
     };
 }
 
-var match = RegExp('[?&]input=[^&]*').exec(window.location.search);
-if (value = match && decodeURIComponent(match[0].split('=')[1])) {
+function fetchQueryValue(key) {
+    var regex = '[?&]' + key + '=[^&]*';
+    var match = RegExp(regex).exec(window.location.search);
+    return match && decodeURIComponent(match[0].split('=')[1]);
+}
+
+if (value = fetchQueryValue('input')) {
     document.getElementById('text-input').value = value;
     setText();
 }
