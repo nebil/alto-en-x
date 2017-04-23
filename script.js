@@ -6,7 +6,9 @@ You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
 
 (function() {
 var input = document.getElementById('text-input');
-input.addEventListener('input', function() {
+input.addEventListener('input', setText);
+
+function setText() {
     var trimmedText = input.value.trim();
     var altoEnText = document.getElementById('alto-en');
     var upperText = document.getElementById('upper');
@@ -87,7 +89,13 @@ input.addEventListener('input', function() {
         svgButton.download = downloadFilename + '.svg';
         svgButton.href = svg;
     };
-});
+}
+
+var match = RegExp('[?&]input=[^&]*').exec(window.location.search);
+if (value = match && decodeURIComponent(match[0].split('=')[1])) {
+    document.getElementById('text-input').value = value;
+    setText();
+}
 
 document.getElementById('upper').addEventListener('click', function() {
     document.getElementById('text-input').focus();
