@@ -18,9 +18,11 @@ var DAYS = [
 var currentDay = new Date().getDay();
 document.body.style.backgroundColor = DAYS[currentDay].color;
 
-        document.getElementById('octocat')
-.contentDocument.getElementById('quarter')
-.classList.add(DAYS[currentDay].name);
+window.onload = function() {
+            document.getElementById('octocat')
+    .contentDocument.getElementById('quarter')
+    .classList.add(DAYS[currentDay].name);
+};
 
 var input = document.getElementById('text-input');
 input.addEventListener('input', setText);
