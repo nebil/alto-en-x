@@ -12,9 +12,10 @@
     }
 
     path#quarter {
-        fill: #FC3;
-      stroke: #FC3;
-      transition: fill 0.5s, stroke 0.5s;
+        fill-opacity: 0;
+      stroke-opacity: 0;
+      transition-duration: 0.5s;
+      transition-property: fill, stroke, fill-opacity, stroke-opacity;
     }
 
     path#quarter.sun {
@@ -53,8 +54,10 @@
     }
 
     path#quarter:hover {
-        fill: #FAFAFA;
-      stroke: #FAFAFA;
+          fill: #FAFAFA;
+        stroke: #FAFAFA;
+        fill-opacity: 1;
+      stroke-opacity: 1;
     }
 
     path#octocat {
