@@ -1,7 +1,7 @@
 /*
-Copyright (c) 2017, Nebil Kawas García.
+Copyright (c) 2017, Nebil Kawas García
 This source code is subject to the terms of the Mozilla Public License.
-You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
+You can obtain a copy of the MPL at <https://www.mozilla.org/MPL/2.0/>.
 */
 
 (function() {
