@@ -24,9 +24,6 @@ window.onload = function() {
     .classList.add(DAYS[currentDay].name);
 };
 
-var input = document.getElementById('text-input');
-input.addEventListener('input', setText);
-
 function setText() {
     var trimmedText = input.value.trim();
     var altoEnText = document.getElementById('alto-en');
@@ -116,12 +113,15 @@ function fetchQueryValue(key) {
     return match && decodeURIComponent(match[0].split('=')[1]);
 }
 
+var input = document.getElementById('text-input');
+input.addEventListener('input', setText);
+
 if (value = fetchQueryValue('input')) {
-    document.getElementById('text-input').value = value;
+    input.value = value;
     setText();
 }
 
 document.getElementById('upper').addEventListener('click', function() {
-    document.getElementById('text-input').focus();
+    input.focus();
 });
 }());
