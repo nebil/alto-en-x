@@ -5,6 +5,27 @@ Todos los cambios relevantes en este repositorio serán descritos en este archiv
 Este proyecto cumplirá con _[semantic versioning](http://semver.org)_
 —o, por lo menos, lo intentará. :grinning:
 
+----------------------------------------------------
+## [0.3.0](../../compare/0.2.1...0.3.0) – 2017-04-30
+
+#### :rabbit: _¿Qué hay de nuevo, viejo?_
+
+Este flamante _release_ viene con algunas mejoras,
+que **sí modifican** la funcionalidad principal.  
+Entre ellas, podemos destacar
+
+- un ajuste automático del tamaño del texto,
+considerando el largo de este mismo
+- la posibilidad de generar sellos utilizando el _[query string](
+README.md#uso-alternativo)_ del URL
+- un versátil catálogo heptacromático para el fondo del sitio web
+- un poco de _metadata_ para ofrecer _[summary cards](
+https://dev.twitter.com/cards/types/summary)_ en Twitter
+- un discreto _upgrade_ de la librería _[normalize.css](
+https://necolas.github.io/normalize.css)_
+(5.0.0 [⟶](https://github.com/necolas/normalize.css/compare/5.0.0...6.0.0) 6.0.0)
+- y, finalmente, un imperceptible _refactor_ de JavaScript.
+
 -----------------------------------------------------
 ### [0.2.1](../../compare/0.2.0...0.2.1) – 2017-03-22
 
