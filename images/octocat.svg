@@ -1,7 +1,8 @@
 <!-- Copyright (c) 2017, Nebil Kawas García
+
    - This source code is subject to the terms of the Mozilla Public License.
-   - If a copy of the MPL was not distributed with this file,
-   - You can obtain one at https://mozilla.org/MPL/2.0/.  -->
+   - If a copy of the MPL2 was not distributed with this file,
+   - You can obtain one at <https://mozilla.org/MPL/2.0/>. -->
 
 <svg xmlns='http://www.w3.org/2000/svg'
      xmlns:xlink='http://www.w3.org/1999/xlink'
@@ -12,18 +13,56 @@
     }
 
     path#quarter {
+        fill-opacity: 0;
+      stroke-opacity: 0;
+      transition-duration: 0.5s;
+      transition-property: fill, stroke, fill-opacity, stroke-opacity;
+    }
+
+    path#quarter.sun {
         fill: #FC3;
       stroke: #FC3;
-      transition: fill 0.5s, stroke 0.5s;
+    }
+
+    path#quarter.mon {
+        fill: #BBB;
+      stroke: #BBB;
+    }
+
+    path#quarter.tue {
+        fill: #C88;
+      stroke: #C88;
+    }
+
+    path#quarter.wed {
+        fill: #C9E;
+      stroke: #C9E;
+    }
+
+    path#quarter.thu {
+        fill: #9DD;
+      stroke: #9DD;
+    }
+
+    path#quarter.fri {
+        fill: #F9C;
+      stroke: #F9C;
+    }
+
+    path#quarter.sat {
+        fill: #9C8;
+      stroke: #9C8;
     }
 
     path#quarter:hover {
-        fill: #333;
-      stroke: #333;
+          fill: #FAFAFA;
+        stroke: #FAFAFA;
+        fill-opacity: 1;
+      stroke-opacity: 1;
     }
 
     path#octocat {
-      fill: #E72;
+      fill: #333;
     }
   </style>
 

@@ -1,12 +1,30 @@
 /*
-Copyright (c) 2017, Nebil Kawas García.
+Copyright (c) 2017, Nebil Kawas García
 This source code is subject to the terms of the Mozilla Public License.
-You can obtain a copy of the MPLv2 at https://www.mozilla.org/MPL/2.0/.
+You can obtain a copy of the MPL at <https://www.mozilla.org/MPL/2.0/>.
 */
 
 (function() {
-var input = document.getElementById('text-input');
-input.addEventListener('input', function() {
+var DAYS = [
+    { name: 'sun', color: '#FC3' },
+    { name: 'mon', color: '#BBB' },
+    { name: 'tue', color: '#C88' },
+    { name: 'wed', color: '#C9E' },
+    { name: 'thu', color: '#9DD' },
+    { name: 'fri', color: '#F9C' },
+    { name: 'sat', color: '#9C8' },
+];
+
+var currentDay = new Date().getDay();
+document.body.style.backgroundColor = DAYS[currentDay].color;
+
+window.onload = function() {
+            document.getElementById('octocat')
+    .contentDocument.getElementById('quarter')
+    .classList.add(DAYS[currentDay].name);
+};
+
+function setText() {
     var trimmedText = input.value.trim();
     var altoEnText = document.getElementById('alto-en');
     var upperText = document.getElementById('upper');
@@ -40,6 +58,23 @@ input.addEventListener('input', function() {
         minsalText.setAttribute('dy', 30);
     }
 
+    function updateFontSize(newSize) {
+        upperText.style.fontSize = newSize;
+        lowerText.style.fontSize = newSize;
+        upperLength = upperText.getComputedTextLength();
+        lowerLength = lowerText.getComputedTextLength();
+    }
+
+    var upperLength = upperText.getComputedTextLength();
+    var lowerLength = lowerText.getComputedTextLength();
+    // Harmonize the text size, depending on its length.
+    if (upperLength <= 100 && lowerLength <= 100)
+        updateFontSize('20px');
+    if (upperLength > 100 || lowerLength > 100)
+        updateFontSize('19px');
+    if (upperLength > 118 || lowerLength > 118)
+        updateFontSize('18px');
+
     // Adapted from: https://developer.mozilla.org/en-US/docs/Web/API/
     // ======= =====     Canvas_API/Drawing_DOM_objects_into_a_canvas/
     var container = document.getElementById('container');
@@ -70,9 +105,23 @@ input.addEventListener('input', function() {
         svgButton.download = downloadFilename + '.svg';
         svgButton.href = svg;
     };
-});
+}
+
+function fetchQueryValue(key) {
+    var regex = '[?&]' + key + '=[^&]*';
+    var match = RegExp(regex).exec(window.location.search);
+    return match && decodeURIComponent(match[0].split('=')[1]);
+}
+
+var input = document.getElementById('text-input');
+input.addEventListener('input', setText);
+
+if (value = fetchQueryValue('input')) {
+    input.value = value;
+    setText();
+}
 
 document.getElementById('upper').addEventListener('click', function() {
-    document.getElementById('text-input').focus();
+    input.focus();
 });
 }());

@@ -20,6 +20,15 @@ _Mucho gusto. Así es, con un poco de imaginación, los zorros podemos hablar._
      
 _Por supuesto, estás invitado a hacer clic en mi seguro, libre y fantástico pelaje._
 
+## Uso alternativo
+
+Es posible, además, crear sellos con el
+_[query string](https://tools.ietf.org/html/rfc3986#section-3.4)_;
+en efecto, basta con agregar `?input=<texto>` al final del URL.  
+Por ejemplo, `https://nebil.github.io/alto-en-x/?input=ejemplo`
+nos generará un sello que dirá “[alto en ejemplo](
+https://nebil.github.io/alto-en-x/?input=ejemplo)”.
+
 ## Diseño
 
 ### De la geometría
@@ -77,8 +86,9 @@ Desde acá, aprovecharé de agradecer
 
 ## Licencia
 
+Copyright © 2017, Nebil Kawas García  
 El código de este repositorio está bajo el [Mozilla Public License v2.0](
-https://www.mozilla.org/MPL/2.0).
+https://www.mozilla.org/MPL/2.0/).
 
 ---
 

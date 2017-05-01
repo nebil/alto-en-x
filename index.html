@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- Copyright (c) 2017, Nebil Kawas García
+
    - This source code is subject to the terms of the Mozilla Public License.
-   - If a copy of the MPL was not distributed with this file,
-   - You can obtain one at https://mozilla.org/MPL/2.0/.  -->
+   - If a copy of the MPL2 was not distributed with this file,
+   - You can obtain one at <https://mozilla.org/MPL/2.0/>. -->
 
 <html lang='es'>
   <head>
@@ -14,8 +15,14 @@
           content='generador,etiquetados,alimentos,Minsal,web-standards,SVG'>
     <meta name='author'
           content='Nebil Kawas García'>
+    <meta name='twitter:card'
+          content='summary'>
+    <meta name='twitter:title'
+          content='Alto en X'>
+    <meta name='twitter:description'
+          content='Genera tus propios sellos de alimentos de forma instantánea.'>
     <link rel='stylesheet' media='screen'
-          href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+          href='https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css'>
     <link rel='stylesheet' media='screen'
     href='https://fonts.googleapis.com/css?family=Fira+Sans:700,900|Roboto:400,400i,700i'>
     <link rel='stylesheet' media='screen' href='style.css'>
@@ -23,7 +30,7 @@
   </head>
 
   <body>
-    <object data='images/octocat.svg' type='image/svg+xml'></object>
+    <object id='octocat' data='images/octocat.svg' type='image/svg+xml'></object>
 
     <h1>Alto en <span id='white'>X</span></h1>
     <h2>
@@ -73,8 +80,8 @@
             style='font-family: Arimo, Liberation Sans, Helvetica, Arial, sans-serif;
                    font-weight: bold;'>
         <tspan x='68' y='60'  style='font-size: 18px;' id='alto-en'>ALTO EN</tspan><!--
-     --><tspan x='68' dy='25' style='font-size: 19px;' id='upper'>?</tspan><!--
-     --><tspan x='68' dy='00' style='font-size: 19px;' id='lower'></tspan><!--
+     --><tspan x='68' dy='25' style='font-size: 20px;' id='upper'>?</tspan><!--
+     --><tspan x='68' dy='00' style='font-size: 20px;' id='lower'></tspan><!--
      --><tspan x='68' dy='30' style='font-size: 9px;' id='minsal'>Ministerio</tspan><!--
      --><tspan x='68' dy='10' style='font-size: 9px;'>de Salud</tspan>
       </text>
@@ -107,7 +114,7 @@
     </div>
 
     <footer>
-      v0.2.1 — <i>
+      v0.3.0 — <i>
         <a href='https://github.com/nebil/alto-en-x/blob/master/CHANGELOG.md'>changelog</a>
       </i>
     </footer>
