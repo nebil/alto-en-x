@@ -69,7 +69,7 @@ Esta pequeña primera versión permite
 - generar, de forma simple, sellos personalizables
 - descargar el resultado en dos posibles formatos: [PNG] y [SVG].
 
-[/]:# (Referencías implícitas)
+[/]:# (Referencias implícitas)
 
 [png]: https://en.wikipedia.org/wiki/Portable_Network_Graphics
 [svg]: https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
