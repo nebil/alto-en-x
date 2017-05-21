@@ -63,7 +63,6 @@ input[type=text] {
   border: none;
   border-bottom: 0.6ex solid #222;
   font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
-  font-size: 1em;
   transition: border-bottom-color 0.5s;
 }
 
@@ -103,9 +102,14 @@ footer {
   margin-top: 3ex;
   padding: 1ex 0em;
 
-  background-color: #CC3;
-  border-left: 0.5em solid #8A3;
+  background-color: #333;
+  border-left: 0.5em solid #0A0A0A;
+  color: #FAFAFA;
   text-align: center;
+}
+
+footer a {
+  color: #66D;
 }
 
 strong {

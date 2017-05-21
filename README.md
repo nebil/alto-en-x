@@ -26,7 +26,7 @@ Es posible, además, crear sellos con el
 _[query string](https://tools.ietf.org/html/rfc3986#section-3.4)_;
 en efecto, basta con agregar `?input=<texto>` al final del URL.  
 Por ejemplo, `https://nebil.github.io/alto-en-x/?input=ejemplo`
-nos generará un sello que dirá “[alto en ejemplo](
+nos generará un sello que dirá “[alto&nbsp;en&nbsp;ejemplo](
 https://nebil.github.io/alto-en-x/?input=ejemplo)”.
 
 ## Diseño

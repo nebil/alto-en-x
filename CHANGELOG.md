@@ -5,6 +5,21 @@ Todos los cambios relevantes en este repositorio serán descritos en este archiv
 Este proyecto cumplirá con _[semantic versioning](http://semver.org)_
 —o, por lo menos, lo intentará. :grinning:
 
+-----------------------------------------------------
+### [0.3.1](../../compare/0.3.0...0.3.1) – 2017-05-21
+
+#### :rabbit: _¿Qué hay de nuevo, viejo?_
+
+Este nuevo _release_ trae algunos cambios menores,
+que **no modifican** la funcionalidad principal.  
+Entre ellos, podemos destacar
+
+- un ajuste del color del _footer_ para lograr una mejor amalgama cromática
+- otro _upgrade_ [[?](https://github.com/necolas/normalize.css/issues/664)]
+de la librería _[normalize.css](https://necolas.github.io/normalize.css)_
+(6.0.0 [⟶](https://github.com/necolas/normalize.css/compare/6.0.0...7.0.0) 7.0.0)
+- y un _refactor_ de JavaScript que separa el código en dos módulos independientes.
+
 ----------------------------------------------------
 ## [0.3.0](../../compare/0.2.1...0.3.0) – 2017-04-30
 
