@@ -63,7 +63,6 @@ input[type=text] {
   border: none;
   border-bottom: 0.6ex solid #222;
   font-family: Roboto, Liberation Sans, Helvetica, Arial, sans-serif;
-  font-size: 1em;
   transition: border-bottom-color 0.5s;
 }
 
