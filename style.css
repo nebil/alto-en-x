@@ -103,9 +103,14 @@ footer {
   margin-top: 3ex;
   padding: 1ex 0em;
 
-  background-color: #CC3;
-  border-left: 0.5em solid #8A3;
+  background-color: #333;
+  border-left: 0.5em solid #0A0A0A;
+  color: #FAFAFA;
   text-align: center;
+}
+
+footer a {
+  color: #66D;
 }
 
 strong {
